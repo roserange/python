@@ -1,0 +1,14 @@
+def modifyString(S):
+    N = len(S)
+    result = [0] * N
+    frequency = [0] * 26
+    for i in range(N):
+        frequency[ord(S[i]) - ord('a')] += 1
+    for i in range(N):
+        c = ord(S[i]) - ord('a')
+        for j in range(26):
+            if (frequency[j] == (j - c + 26) % 26):
+                result[i] = chr(j + ord('a'))
+                frequency[j] = -1
+                break
+    return ''.join(result)

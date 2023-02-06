@@ -1,0 +1,13 @@
+def bakery_sale(n):
+    regular_price = 185
+    discount_percent = 0.6
+    discount = regular_price * discount_percent
+    total_discount = discount * n
+    total_price = regular_price * n - total_discount
+    
+    print("Regular Price: {:.2f}".format(regular_price))
+    print("Discount: {:.2f}".format(discount))
+    print("Total Price: {:.2f}".format(total_price))
+
+number_of_loaves = int(input("Enter the number of loaves: "))
+bakery_sale(number_of_loaves)
