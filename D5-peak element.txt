@@ -1,0 +1,9 @@
+x=list(map(int,input().split()))
+a=max(x)
+b=x.index(a)
+c=x[0:b]
+d=c[-1]
+if (b==a-1):
+    print(a-1)
+else:
+    print(a)
